@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+    <html lang="en" dir="ltr">
+
+    <head>
+      <meta charset="utf-8">
+      <title>Battle Game</title>
+      <link href="style.css" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+      <!-- BACKGROUND-->
+
+      <!-- Background principal du jeu-->
+      <div class="backgroundGame"><br>
+      <!-- HEADER contenant le titre du jeu -->
+        <h1><img src="../12-rpg-challenge/image/human.png" width = "50px" alt=""> <img src="../12-rpg-challenge/image/elve.png" width = "50px" alt=""> &nbsp; Battle Game &nbsp; <img src="../12-rpg-challenge/image/orc2.png" width="50px" alt=""> <img src="../12-rpg-challenge/image/vampire2.png" width = "50px" alt=""> </h1>
+        <!-- Emplacement du VS Screen -->
+        <div class= vsScreen>
+      
+          <!-- Personnage partie gauche -->
+          <div id = "createPerso1Div" class= leftScreen>
+            <h3>Player 1</h3>
+          <div class= "input-groupe">
+            <label for= "nomPerso1"> Nom &nbsp; </label><input id= "nomPerso1" name= "nomPerso1" />  
+          </div><br>
+          <div class= "input-groupe">
+            <label for= "racePerso1"> Race &nbsp; </label><select id= "racePerso1" name= "racePerso1"></select>
+          </div><br>
+          <div class= "input-groupe">
+            <label for= "itemsPerso1"> Item &nbsp; </label><select id= "itemsPerso1" name= "itemsPerso1"></select>
+          </div><br>
+            <button id= "button1" type="button">Create</button>
+          </div>
+          <!-- stats qui s'affichent après la fonction JS createPerso1 -->
+          <div id="statPerso1" class= "leftScreen hidden">
+            <div>
+              <label>Name: </label><span class="nomPerso"></span>
+            </div>
+            <div>
+              <label>Race : </label><span class="racePerso"></span>
+            </div>
+            <div>
+              <label>Item : </label><span class="itemsPerso"></span>
+            </div>
+            <div>
+              <label>Health : </label><span class="pvActuel"></span>/<span class="pvMax"></span>
+            </div>
+          </div>
+
+          <!-- Personnage partie droite -->
+          <div id = "createPerso2Div" class= rightScreen>
+            <h3>Player 2</h3>
+            <div class= "input-groupe">
+              <label for= "nomPerso2"> Nom &nbsp; </label><input id= "nomPerso2" name= "nomPerso2" />  
+            </div> <br>
+            <div class= "input-groupe">
+              <label for= "racePerso2"> Race &nbsp; </label><select id= "racePerso2" name= "racePerso2"></select>
+            </div><br>
+            <div class= "input-groupe">
+              <label for= "itemsPerso2"> Item &nbsp; </label><select id= "itemsPerso2" name= "itemsPerso2"></select>
+            </div><br>
+            <button id = "button2" type="button">Create</button>
+            </div>
+          
+          <!-- stats qui s'affichent après la fonction JS createPerso2 -->
+          <div id = "statPerso2" class = "rightScreen hidden">
+            <div>
+              <label>Name: </label><span class="nomPerso"></span>
+            </div>
+            <div>
+              <label>Race : </label><span class="racePerso"></span>
+            </div>
+            <div>
+              <label>Item : </label><span class="itemsPerso"></span>
+            </div>
+            <div>
+              <label>Health : </label><span class="pvActuel"></span>/<span class="pvMax"></span>
+            </div>
+          </div>
+        
+        </div>
+
+        <!-- Canvas contenant le jeu
+        <canvas id="canvasJeu" width="150" height="150">
+          
+        </canvas> -->
+        <!-- cadre boutons -->
+        <div class=buttonConsole>
+          <div class= "btnleft">
+            <img id= "hit1" src="../12-rpg-challenge/image/hitbutton1.png"  alt=""> &nbsp; &nbsp;
+            <img id= "heal1" src="../12-rpg-challenge/image/healbutton1.png" alt=""> &nbsp; &nbsp;
+            <img id= "yield1" src="../12-rpg-challenge/image/yieldbutton1.png" alt=""> &nbsp; &nbsp;
+          </div>
+        
+          <div class= "btnright">
+            <img id= "hit2" src="../12-rpg-challenge/image/hitbutton1.png"  alt=""> &nbsp; &nbsp;
+            <img id= "heal2" src="../12-rpg-challenge/image/healbutton1.png" alt=""> &nbsp; &nbsp;
+            <img id= "yield2" src="../12-rpg-challenge/image/yieldbutton1.png" alt=""> &nbsp; &nbsp;
+          </div>
+        </div>
+        <!-- Cadre log mouvements -->
+        <div class="log">
+          <h3>Battle</h3>
+          <p id="log"></p>
+        </div>
+      
+        <script type="text/javascript" src="character.js"></script>
+        <script type="text/javascript" src="game.js"></script>
+    </body>
+</html>
