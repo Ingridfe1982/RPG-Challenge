@@ -1,10 +1,28 @@
 body {
     background-color: black;
-    /* background-image: url("./image/fondanime.gif"); */
-    width: 650px;
+    
+    width: 750px;
     margin: auto;
     font-family: "Avantgarde", sans-serif;
     }
+
+  .effetbckd {
+    background-image: url("./image/fondanime.gif");
+      margin-top: 1px;
+      margin-left: 10px;
+      margin-right: 10px;
+      padding-top: 20px;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 16px;
+      border-radius: 10px;   
+  }
+/* MODIFICATIONS APRES COMMIT 17/02 MATIN */
+  .nomPerso {
+    color: #e60073;
+    font-size: medium;
+    font-weight: bold;
+  }
   
   /* HEADER contenant le titre du jeu */
   h1 {
@@ -24,7 +42,7 @@ body {
 
     .backgroundGame {
       background-image: url("./image/fond5.jpg");
-      background-repeat: repeat-x;
+      background-repeat: repeat;
       margin-top: 15px;
       padding-bottom: 15px;
       border-radius: 10px;
@@ -88,7 +106,7 @@ body {
         border-color: #00bdff;
 
       }
-
+     
       .hidden {
         display: none !important;
       }
@@ -119,6 +137,7 @@ body {
         border-style: solid;
         border-color: #00bdff;
         margin-top: 15px;
+        margin-left: 12px;
         padding-top: 10px;
         padding-left: 25px;
         padding-right: 10px;
@@ -133,7 +152,7 @@ body {
         border-style: solid;
         border-color: #00bdff;
         margin-top: 15px;
-        margin-left: 25px;
+        margin-right: 12px;
         padding-top: 10px;
         padding-left: 25px;
         padding-right: 10px;

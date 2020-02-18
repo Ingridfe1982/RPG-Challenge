@@ -94,6 +94,14 @@ function hit1 () {
             perso2.damage(damage);
         }
     }
+    // AJOUT DEPUIS LE COMMIT DU 17/02 MATIN
+    if (perso2.race === "Elf") {
+        let reflectattack = Math.random()*100;
+        if (reflectattack <= 30){
+            addToLog(perso2.name+ " reflect attack back!")
+            perso1.damage(damage);
+        }
+    }
 }
 document.getElementById("hit1").addEventListener("click", () => {
     hit1();
@@ -135,7 +143,29 @@ function hit2 () {
             perso1.damage(damage);
         }
     }
+
+    // AJOUT DEPUIS LE COMMIT DU 17/02 MATIN
+    if (perso1.race === "Elf") {
+        let reflectattack = Math.random()*100;
+        if (reflectattack <= 30){
+            addToLog(perso1.name+ " reflect attack back!")
+            perso2.damage(damage); 
+        } 
+        // BAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHHHH!!!!!!!!!
+    
+    }
 }
+// Let reflected = false
+// Si ennemi est elfe il a 30%( random et condition <=30) et 
+// seulement dans ces deux cas je place reflected à true
+// Ensuite
+// Si reflected est true
+// Attaquant se prends 100% des dégâts et défenseur 50%
+// Sinon
+// Défenseur se prend 100% des dégâts
+
+
+
 document.getElementById("hit2").addEventListener("click", () => {
     hit2();
     refreshPersos();
@@ -171,7 +201,8 @@ function addToLog(toLog){
 
 // Human : 20% less damage taken - OK
  //Orc : 40% more max health - OK
- //A FAIRE Elves 30% chance to reflect the attack back to the opponent. They take damage equal to 50% of the original hit.
+ //Elves 30% chance to reflect the attack back to the opponent. - OK
+// A FAIRE Elves They take damage equal to 50% of the original hit.
  //A FAIRE Vampire 10% lifesteal from opponents current health at start of the vampire's turn. |
 
 
